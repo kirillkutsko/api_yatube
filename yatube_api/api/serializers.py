@@ -8,7 +8,6 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('username',)
 
 
-
 class PostSerializer(serializers.ModelSerializer):
     author = serializers.SlugRelatedField(
         slug_field='username',
@@ -23,6 +22,7 @@ class PostSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         post = Post.objects.create(**validated_data)
         return post
+
 
 class CommentSerializer(serializers.ModelSerializer):
     author = serializers.SlugRelatedField(
