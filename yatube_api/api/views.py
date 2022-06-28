@@ -3,12 +3,8 @@ from posts.models import Comment, Group, Post, User
 from rest_framework import permissions, status, viewsets
 from rest_framework.response import Response
 
-from .serializers import (
-    CommentSerializer,
-    GroupSerializer,
-    PostSerializer,
-    UserSerializer
-)
+from .serializers import (CommentSerializer, GroupSerializer, PostSerializer,
+                          UserSerializer)
 
 
 class PostViewSet(viewsets.ModelViewSet):

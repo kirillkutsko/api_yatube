@@ -7,8 +7,8 @@ from rest_framework.authtoken import views
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-router.register(r'posts', PostViewSet)
 router.register(r'groups', GroupViewSet)
+router.register(r'posts', PostViewSet)
 router.register(r'users', UserViewSet)
 router.register(
     r'posts/([0-9]+)/comments',
