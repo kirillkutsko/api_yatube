@@ -1,8 +1,8 @@
-from api.permissions import AuthorOrReadOnly
 from django.shortcuts import get_object_or_404
-from posts.models import Group, Post, User
 from rest_framework import viewsets
 
+from api.permissions import AuthorOrReadOnly
+from posts.models import Group, Post, User
 from .serializers import (CommentSerializer, GroupSerializer, PostSerializer,
                           UserSerializer)
 
